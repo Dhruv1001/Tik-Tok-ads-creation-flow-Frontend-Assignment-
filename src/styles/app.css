@@ -1,0 +1,268 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  font-size: 26px;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+.small {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 16px;
+  box-shadow: 0px 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.hr {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 16px 0;
+}
+
+/* ---------- Layout ---------- */
+.row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.col {
+  flex: 1;
+  min-width: 240px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+  .col {
+    min-width: 100%;
+  }
+}
+
+/* ---------- Form ---------- */
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #334155;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.2s;
+  font-size: 14px;
+  background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.08);
+}
+
+textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: #111827;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button.secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+button.secondary:hover {
+  opacity: 1;
+  background: #dbe5f2;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+/* ---------- Status Pills ---------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 900;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* Not connected */
+.pill.neutral {
+  background: #f1f5f9;
+  color: #334155;
+  border-color: #e2e8f0;
+}
+
+/* Connected */
+.pill.success {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+/* Expired */
+.pill.warning {
+  background: #fef9c3;
+  color: #854d0e;
+  border-color: #fde68a;
+}
+
+/* ---------- Errors ---------- */
+.error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+/* ---------- Banners ---------- */
+.banner {
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 14px 0;
+  font-weight: 800;
+  border: 1px solid transparent;
+}
+
+.banner.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.banner.success {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+/* ---------- Helpers ---------- */
+.tokenText {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #475569;
+  word-break: break-all;
+}
+/* ---------- Radio Group (Music Options) ---------- */
+.radioGroup {
+  display: grid;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.radioItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.radioItem input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-top: 4px; /* aligns with label text */
+  flex: 0 0 auto;
+}
+
+.radioItemLabel {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.radioSub {
+  margin-top: 10px; /* ✅ no left margin */
+}
+
+.radioSubRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tip {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
